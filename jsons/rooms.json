@@ -1,0 +1,333 @@
+{
+  "rooms": [
+    {
+      "room_id": "6",
+      "capacity": 96,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 0
+    },
+    {
+      "room_id": "10",
+      "capacity": 96,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "11",
+      "capacity": 112,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "12",
+      "capacity": 132,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "13",
+      "capacity": 96,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "14",
+      "capacity": 96,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "16",
+      "capacity": 135,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "17",
+      "capacity": 84,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 1
+    },
+    {
+      "room_id": "20",
+      "capacity": 84,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "21",
+      "capacity": 76,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "22",
+      "capacity": 80,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "23",
+      "capacity": 112,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "24",
+      "capacity": 128,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "24A",
+      "capacity": 54,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "24B",
+      "capacity": 87,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "25",
+      "capacity": 108,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "26",
+      "capacity": 96,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "28",
+      "capacity": 112,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "29",
+      "capacity": 96,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "C-Room",
+      "capacity": 60,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 2
+    },
+    {
+      "room_id": "30",
+      "capacity": 42,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "31",
+      "capacity": 72,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "32",
+      "capacity": 72,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "33",
+      "capacity": 128,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "34",
+      "capacity": 144,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "35",
+      "capacity": 42,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "35A",
+      "capacity": 56,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "35B",
+      "capacity": 60,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "36",
+      "capacity": 72,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "37",
+      "capacity": 76,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "38",
+      "capacity": 88,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "39",
+      "capacity": 116,
+      "hasAC": false,
+      "hasAV": true,
+      "floor": 3
+    },
+    {
+      "room_id": "40",
+      "capacity": 100,
+      "hasAC": false,
+      "hasAV": false,
+      "floor": 4
+    },
+    {
+      "room_id": "40A",
+      "capacity": 90,
+      "hasAC": false,
+      "hasAV": false,
+      "floor": 4
+    },
+    {
+      "room_id": "40B",
+      "capacity": 85,
+      "hasAC": false,
+      "hasAV": false,
+      "floor": 4
+    },
+    {
+      "room_id": "41",
+      "capacity": 96,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "41A",
+      "capacity": 100,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "42",
+      "capacity": 84,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "43",
+      "capacity": 80,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "44",
+      "capacity": 42,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "47",
+      "capacity": 76,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "48",
+      "capacity": 48,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "49",
+      "capacity": 48,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "MCV R1",
+      "capacity": 72,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "MCV R2",
+      "capacity": 67,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "MCV R3",
+      "capacity": 91,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    },
+    {
+      "room_id": "MCV R4",
+      "capacity": 30,
+      "hasAC": true,
+      "hasAV": true,
+      "floor": 4
+    }
+  ]
+}

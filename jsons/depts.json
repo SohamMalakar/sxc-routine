@@ -1,0 +1,1604 @@
+{
+  "depts": [
+    {
+      "name": "English",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "11"
+        },
+        {
+          "room_id": "13"
+        },
+        {
+          "room_id": "20"
+        },
+        {
+          "room_id": "34"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 75,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 61,
+              "ths": {
+                "major": 21,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 67,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 84,
+              "ths": {
+                "major": 24,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 78,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Political Science",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "14"
+        },
+        {
+          "room_id": "16"
+        },
+        {
+          "room_id": "17"
+        },
+        {
+          "room_id": "31"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 73,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 73,
+              "ths": {
+                "major": 20,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 75,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 84,
+              "ths": {
+                "major": 24,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 64,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Sociology",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "10"
+        },
+        {
+          "room_id": "12"
+        },
+        {
+          "room_id": "24B"
+        },
+        {
+          "room_id": "38"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 78,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 68,
+              "ths": {
+                "major": 20,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 66,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 73,
+              "ths": {
+                "major": 24,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 64,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "History",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "35A"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 55,
+              "ths": {
+                "major": 24,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Bengali",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "40B"
+        },
+        {
+          "room_id": "41A"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 45,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 37,
+              "ths": {
+                "major": 20,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 33,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mass Communication",
+      "type": "arts",
+      "homes": [
+        {
+          "room_id": "MCV R2"
+        },
+        {
+          "room_id": "MCV R3"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 42,
+              "ths": {
+                "major": 0,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 3
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 26,
+              "ths": {
+                "major": 12,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 3
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 31,
+              "ths": {
+                "major": 8,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 3
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 5
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathematics",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "36"
+        },
+        {
+          "room_id": "37"
+        },
+        {
+          "room_id": "39"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 65,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 61,
+              "ths": {
+                "major": 18,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 1
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 58,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Economics",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "24"
+        },
+        {
+          "room_id": "25"
+        },
+        {
+          "room_id": "28"
+        },
+        {
+          "room_id": "33"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 74,
+              "ths": {
+                "major": 8,
+                "minor": 4,
+                "mds": 4,
+                "envs": 1
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": [
+                  {
+                    "cons": 1,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ]
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 63,
+              "ths": {
+                "major": 20,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 58,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 60,
+              "ths": {
+                "major": 22,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 56,
+              "ths": {
+                "major": 16,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Computer Science",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "23"
+        },
+        {
+          "room_id": "32"
+        },
+        {
+          "room_id": "C-Room"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 57,
+              "ths": {
+                "major": 6,
+                "minor": 3,
+                "mds": 4,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 3
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": [
+                  {
+                    "cons": 1,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ]
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 57,
+              "ths": {
+                "major": 12,
+                "minor": 4,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 43,
+              "ths": {
+                "major": 14,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 43,
+              "ths": {
+                "major": 16,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 45,
+              "ths": {
+                "major": 14,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Physics",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "29"
+        },
+        {
+          "room_id": "36"
+        },
+        {
+          "room_id": "24A"
+        },
+        {
+          "room_id": "MCV R1"
+        },
+        {
+          "room_id": "MCV R4"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 57,
+              "ths": {
+                "major": 3,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 51,
+              "ths": {
+                "major": 12,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 47,
+              "ths": {
+                "major": 14,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 50,
+              "ths": {
+                "major": 18,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 4
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 57,
+              "ths": {
+                "major": 13,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 5
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Chemistry",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "21"
+        },
+        {
+          "room_id": "22"
+        },
+        {
+          "room_id": "35B"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 47,
+              "ths": {
+                "major": 7,
+                "minor": 3,
+                "mds": 4,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 1
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": [
+                  {
+                    "cons": 1,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ]
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 51,
+              "ths": {
+                "major": 12,
+                "minor": 4,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 63,
+              "ths": {
+                "major": 12,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Microbiology",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "40"
+        },
+        {
+          "room_id": "40A"
+        },
+        {
+          "room_id": "41"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 66,
+              "ths": {
+                "major": 7,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 53,
+              "ths": {
+                "major": 13,
+                "minor": 4,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 57,
+              "ths": {
+                "major": 12,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 52,
+              "ths": {
+                "major": 19,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 4
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 58,
+              "ths": {
+                "major": 15,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Statistics",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "42"
+        },
+        {
+          "room_id": "43"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 61,
+              "ths": {
+                "major": 6,
+                "minor": 4,
+                "mds": 6,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 53,
+              "ths": {
+                "major": 12,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 1,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [
+                  {
+                    "cons": 2,
+                    "freq": 3
+                  }
+                ],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 55,
+              "ths": {
+                "major": 12,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Data Science",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "44"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 37,
+              "ths": {
+                "major": 16,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 42,
+              "ths": {
+                "major": 12,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 3
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Biotech",
+      "type": "science",
+      "homes": [
+        {
+          "room_id": "47"
+        },
+        {
+          "room_id": "48"
+        },
+        {
+          "room_id": "49"
+        }
+      ],
+      "prgms": [
+        {
+          "type": "U.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": false,
+              "strength": 60,
+              "ths": {
+                "major": 6,
+                "minor": 4,
+                "mds": 3,
+                "envs": 1
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": [
+                  {
+                    "cons": 1,
+                    "freq": 2
+                  },
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ]
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": false,
+              "strength": 47,
+              "ths": {
+                "major": 16,
+                "minor": 6,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 6,
+              "hasoffday": true,
+              "strength": 46,
+              "ths": {
+                "major": 22,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 1
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        },
+        {
+          "type": "P.G.",
+          "sems": [
+            {
+              "no": 2,
+              "hasoffday": true,
+              "strength": 35,
+              "ths": {
+                "major": 21,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 3,
+                    "freq": 2
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            },
+            {
+              "no": 4,
+              "hasoffday": true,
+              "strength": 30,
+              "ths": {
+                "major": 29,
+                "minor": 0,
+                "mds": 0,
+                "envs": 0
+              },
+              "prs": {
+                "major": [
+                  {
+                    "cons": 2,
+                    "freq": 1
+                  }
+                ],
+                "minor": [],
+                "mds": []
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
