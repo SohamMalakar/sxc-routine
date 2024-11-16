@@ -95,8 +95,8 @@ class Batch:
             end = len(TIME_SLOTS) - 1
 
         if start < BREAK_FROM:
-            success = self.__allocate(day, classtype, is_practical, cons, start, end=BREAK_FROM - 1 if end >= BREAK_FROM-1 else end, batches=batches, rooms=rooms)
-            if not success and end > BREAK_FROM-1:
+            success = self.__allocate(day, classtype, is_practical, cons, start, end=BREAK_FROM-1 if end >= BREAK_FROM-1 else end, batches=batches, rooms=rooms)
+            if not success and end > BREAK_FROM - 1:
                 return self.__allocate(day, classtype, is_practical, cons, start=BREAK_FROM, end=end, batches=batches, rooms=rooms)
             return success
         else:
@@ -256,8 +256,6 @@ def distribute(batches, rooms, classtype, iteration=1):
                     for _ in range(iteration):
                         if batch.rem_classes(classtype) > 0:
                             success = batch.allocate(days[i], classtype, batches=batches, rooms=rooms)
-                            # if not success:
-                                # success = batch.allocate(days[i], classtype, batches=batches, rooms=rooms)
                             if not success:
                                 days.remove(days[i])
                                 i -= 1
