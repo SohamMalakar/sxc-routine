@@ -3,36 +3,38 @@ import pandas as pd
 import copy
 
 from enum import Enum
-from dataclasses import dataclass
 
 DAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
 TIME_SLOTS = ("10:10-11:00", "11:05-11:55", "12:00-12:45", "1:15-2:05", "2:10-3:00", "3:05-3:55", "4:00-4:45")
 BREAK_FROM = 3
 NO_THEORY_FROM = 6
+MIN_CLASSES = 2
+
+ENVS_ROOM_ID = "24"
 
 ClassType = Enum("ClassType", ['NA', 'MAJOR', 'MINOR', 'MDS', 'ENVS'])
 
 
-@dataclass
 class Slot:
-    room_id: str = None
-    classtype: ClassType = ClassType.NA
-    is_practical: bool = False
-    cont: bool = False
+    def __init__(self):
+        self.room_id = None
+        self.classtype = ClassType.NA
+        self.is_practical = False
+        self.next = False
 
     def __str__(self):
-        if self.classtype == ClassType.NA:
-            return "X"
-        return self.classtype.name + "(" + ("P" if self.is_practical else "T") + ")" + ("*" if self.cont else "") + (f" {self.room_id}" if self.room_id != None else "")
+        if self.classtype != ClassType.NA:
+            return f"{self.classtype.name}({self.is_practical and 'P' or 'T'}){'{Next}' * self.next} {str(self.room_id) * bool(self.room_id)}"
+        return "X"
 
 
-@dataclass
 class Room:
-    room_id: str
-    capacity: int
-    hasAC: bool
-    hasAV: bool
-    floor: int
+    def __init__(self, room_id, capacity, hasAC, hasAV, floor):
+        self.room_id = room_id
+        self.capacity = capacity
+        self.hasAC = hasAC
+        self.hasAV = hasAV
+        self.floor = floor
 
 
 class Batch:
@@ -73,7 +75,7 @@ class Batch:
                 for j in range(cons):
                     self.grid[day][i + j].classtype = classtype
                     self.grid[day][i + j].is_practical = is_practical
-                    self.grid[day][i + j].cont = j != cons - 1
+                    self.grid[day][i + j].next = j != cons - 1
                 if is_practical:
                     for pr in self.prs[classtype.name.lower()]:
                         if pr["cons"] == cons:
@@ -93,12 +95,59 @@ class Batch:
             end = len(TIME_SLOTS) - 1
 
         if start < BREAK_FROM:
-            success = self.__allocate(day, classtype, is_practical, cons, start, end=BREAK_FROM-1 if end >= BREAK_FROM-1 else end, batches=batches, rooms=rooms)
+            success = self.__allocate(day, classtype, is_practical, cons, start, end=BREAK_FROM - 1 if end >= BREAK_FROM-1 else end, batches=batches, rooms=rooms)
             if not success and end > BREAK_FROM-1:
                 return self.__allocate(day, classtype, is_practical, cons, start=BREAK_FROM, end=end, batches=batches, rooms=rooms)
             return success
         else:
             return self.__allocate(day, classtype, is_practical, cons, start=start, end=end, batches=batches, rooms=rooms)
+
+    def deallocate(self, day, index=0, ct=None):
+        if index >= len(TIME_SLOTS):
+            return None
+
+        i = index
+        cons = 0
+
+        while True:
+            ref = self.grid[day][i]
+
+            classtype = ref.classtype
+
+            if classtype == ClassType.NA:
+                return i + 1
+
+            if ct != None and ct != classtype:
+                return None
+
+            is_practical = ref.is_practical
+            cons += 1
+
+            ref.room_id = None
+            ref.classtype = ClassType.NA
+            ref.is_practical = False
+            i += 1
+
+            if not ref.next:
+                break
+
+            ref.next = False
+
+        if is_practical:
+            found = False
+
+            for pr in self.prs[classtype.name.lower()]:
+                if pr["cons"] == cons:
+                    pr["freq"] += 1
+                    found = True
+                    break
+
+            if not found:
+                self.prs[classtype.name.lower()].append({"cons": cons, "freq": 1})
+        else:
+            self.ths[classtype.name.lower()] += 1
+        
+        return i
 
     def rem_periods(self, classtype, is_practical=False):
         if is_practical:
@@ -147,7 +196,7 @@ def custom_distribute(batches, classtype1, classtype2):
                             batch.allocate(day, classtype, is_practical=True, start=start, end=end, cons=cons)
 
 
-def distribute(batches, rooms, classtype):
+def distribute(batches, rooms, classtype, iteration=1):
     # practical allocation
     limit1 = (0, BREAK_FROM-1)
     limit2 = (BREAK_FROM, len(TIME_SLOTS)-1)
@@ -161,18 +210,28 @@ def distribute(batches, rooms, classtype):
                 days.remove(batch.offday)
                 no_of_days -= 1
 
+            if batch.dept == "English" and batch.sem == 2 and batch.prgm == "U.G." and iteration == MIN_CLASSES:
+                pass
+
             while batch.rem_classes(classtype, is_practical=True) > 0 and len(days) > 0:
-                for day in days:
-                    if batch.rem_classes(classtype, is_practical=True) > 0:
-                        for pr in batch.prs[classtype.name.lower()]:
-                            if pr["freq"] > 0:
-                                cons = pr["cons"]
+                if batch.rem_classes(classtype) < MIN_CLASSES and iteration != 1:
+                    days = sorted(days, key=(lambda x: sum([slot.classtype == ClassType.NA for slot in batch.grid[x]])))
+                i = 0
+                while i < len(days):
+                    for _ in range(iteration):
+                        if batch.rem_classes(classtype, is_practical=True) > 0:
+                            for pr in batch.prs[classtype.name.lower()]:
+                                if pr["freq"] > 0:
+                                    cons = pr["cons"]
+                                    break
+                            success = batch.allocate(days[i], classtype, is_practical=True, cons=cons, start=limit1[0], end=limit1[1])
+                            if not success:
+                                success = batch.allocate(days[i], classtype, is_practical=True, cons=cons, start=limit2[0], end=limit2[1])
+                            if not success:
+                                days.remove(days[i])
+                                i -= 1
                                 break
-                        success = batch.allocate(day, classtype, is_practical=True, cons=cons, start=limit1[0], end=limit1[1])
-                        if not success:
-                            success = batch.allocate(day, classtype, is_practical=True, cons=cons, start=limit2[0], end=limit2[1])
-                        if not success:
-                            days.remove(day)
+                    i += 1
 
                     limit1, limit2 = limit2, limit1
 
@@ -186,14 +245,24 @@ def distribute(batches, rooms, classtype):
                 days.remove(batch.offday)
                 no_of_days -= 1
 
+            if batch.dept == "English" and batch.sem == 2 and batch.prgm == "U.G." and iteration == MIN_CLASSES:
+                pass
+
             while batch.rem_classes(classtype) > 0 and len(days) > 0:
-                for day in days:
-                    if batch.rem_classes(classtype) > 0:
-                        success = batch.allocate(day, classtype, batches=batches, rooms=rooms)
-                        if not success:
-                            success = batch.allocate(day, classtype, batches=batches, rooms=rooms)
-                        if not success:
-                            days.remove(day)
+                if batch.rem_classes(classtype) < MIN_CLASSES and iteration != 1:
+                    days = sorted(days, key=(lambda x: sum([slot.classtype == ClassType.NA for slot in batch.grid[x]])))
+                i = 0
+                while i < len(days):
+                    for _ in range(iteration):
+                        if batch.rem_classes(classtype) > 0:
+                            success = batch.allocate(days[i], classtype, batches=batches, rooms=rooms)
+                            # if not success:
+                                # success = batch.allocate(days[i], classtype, batches=batches, rooms=rooms)
+                            if not success:
+                                days.remove(days[i])
+                                i -= 1
+                                break
+                    i += 1
 
 
 def allot_rooms(batches, homes, rooms, floors, classtype, is_practical=False):
@@ -217,7 +286,7 @@ def allot_rooms(batches, homes, rooms, floors, classtype, is_practical=False):
                 cons = 1
 
                 for k in range(j, len(TIME_SLOTS)):
-                    if not batch.grid[i][k].cont or batch.grid[i][k].classtype != classtype or batch.grid[i][k].is_practical != is_practical:
+                    if not batch.grid[i][k].next or batch.grid[i][k].classtype != classtype or batch.grid[i][k].is_practical != is_practical:
                         break
                     cons += 1
 
@@ -256,7 +325,7 @@ def allot_rooms(batches, homes, rooms, floors, classtype, is_practical=False):
                 cons = 1
 
                 for k in range(j, len(TIME_SLOTS)):
-                    if not batch.grid[i][k].cont or batch.grid[i][k].classtype != classtype or batch.grid[i][k].is_practical != is_practical:
+                    if not batch.grid[i][k].next or batch.grid[i][k].classtype != classtype or batch.grid[i][k].is_practical != is_practical:
                         break
                     cons += 1
 
@@ -328,9 +397,15 @@ def allot_rooms(batches, homes, rooms, floors, classtype, is_practical=False):
         raise Exception
 
 
-def init_offdays(batches):
+def init_offdays(batches, revoke=False):
     for batch in batches:
-        offday_feasibility = batch.rem_periods(ClassType.MAJOR) + batch.rem_periods(ClassType.MAJOR, is_practical=True) + batch.rem_periods(ClassType.MINOR) + batch.rem_periods(ClassType.MINOR, is_practical=True) + batch.rem_periods(ClassType.MDS) + batch.rem_periods(ClassType.MDS, is_practical=True) + batch.rem_periods(ClassType.ENVS) <= len(TIME_SLOTS) * (len(DAYS) - 1)
+        rem_periods = batch.rem_periods(ClassType.MAJOR) + batch.rem_periods(ClassType.MAJOR, is_practical=True) + batch.rem_periods(ClassType.MINOR) + batch.rem_periods(ClassType.MINOR, is_practical=True) + batch.rem_periods(ClassType.MDS) + batch.rem_periods(ClassType.MDS, is_practical=True) + batch.rem_periods(ClassType.ENVS)
+
+        if revoke and rem_periods > 0:
+            batch.offday = None
+            continue
+
+        offday_feasibility = rem_periods <= (len(TIME_SLOTS) - 1) * (len(DAYS) - 1)
 
         if offday_feasibility and batch.hasoffday:
             batch.offday = random.randint(0, len(DAYS) - 1)
@@ -356,6 +431,14 @@ def to_dataframe(batches):
         merged_df = pd.merge(merged_df, df, on=['Day', 'Time']) if batch != batches[0] else df
 
     return merged_df
+
+
+def allot_envs_room(batches):
+    for batch in batches:
+        for day in batch.grid:
+            for slot in day:
+                if slot.classtype == ClassType.ENVS:
+                    slot.room_id = ENVS_ROOM_ID
 
 
 def populate(depts_json, rooms_json, seed):
@@ -388,33 +471,68 @@ def populate(depts_json, rooms_json, seed):
     distribute(batches, rooms, ClassType.MAJOR)
     distribute(batches, rooms, ClassType.ENVS)
 
-    allot_rooms(batches, homes, rooms, floors, ClassType.MAJOR)
-    allot_rooms(batches, homes, rooms, floors, ClassType.MINOR)
-    allot_rooms(batches, homes, rooms, floors, ClassType.MDS)
-    allot_rooms(batches, homes, rooms, floors, ClassType.ENVS)
+    for batch in batches:
+        for day in range(len(DAYS)):
+            count = 0
+            for slot in batch.grid[day]:
+                if slot.classtype != ClassType.NA:
+                    count += 1
+            if count >= 1 and count < MIN_CLASSES:
+                r = 0
+                while r != None:
+                    r = batch.deallocate(day, r, ClassType.MAJOR)
+
+                r = 0
+                while r != None:
+                    r = batch.deallocate(day, r, ClassType.ENVS)
+
+    init_offdays(batches, revoke=True)
+
+    distribute(batches, rooms, ClassType.MAJOR, MIN_CLASSES)
+    distribute(batches, rooms, ClassType.ENVS, MIN_CLASSES)
+
+    for batch in batches:
+        for day in range(len(DAYS)):
+            count = 0
+            for slot in batch.grid[day]:
+                if slot.classtype != ClassType.NA:
+                    count += 1
+            if count >= 1 and count < MIN_CLASSES:
+                raise Exception
+
+    # if it fails to distribute the slots, it will throw an exception
+    if sum([batch.rem_periods(ClassType.MAJOR) + batch.rem_periods(ClassType.MAJOR, is_practical=True) + batch.rem_periods(ClassType.MINOR) + batch.rem_periods(ClassType.MINOR, is_practical=True) + batch.rem_periods(ClassType.MDS) + batch.rem_periods(ClassType.MDS, is_practical=True) + batch.rem_periods(ClassType.ENVS) for batch in batches]) > 0:
+        raise Exception
+
+    # exclude the envs room from the rooms list
+    rooms_wo_envs = list(filter(lambda room: room.room_id != ENVS_ROOM_ID, rooms))
+
+    allot_rooms(batches, homes, rooms_wo_envs, floors, ClassType.MAJOR)
+    allot_rooms(batches, homes, rooms_wo_envs, floors, ClassType.MINOR)
+    allot_rooms(batches, homes, rooms_wo_envs, floors, ClassType.MDS)
+
+    # one specific room will be alloted for all envs classes
+    allot_envs_room(batches)
 
     ordered_batches = reorder_batches(depts_json, batches)
     return ordered_batches
 
 
-def generate(depts_json, rooms_json, seed):
-    i = 0
-    while True:
+def generate(depts_json, rooms_json, seed, iteration=1000):
+    batches = None
+
+    for i in range(iteration):
         try:
             print("current seed:", seed)
             batches = populate(copy.deepcopy(depts_json), copy.deepcopy(rooms_json), seed)
             break
         except:
             print("error: failed to generate!")
-            i += 1
             seed += (i * i + i) >> 1
-            # seed += 1
+
+    # if it fails to generate the routine even after {iteration} no of iterations, it will throw an exception
+    if batches == None:
+        raise Exception
 
     print(f"failed {i} times! generated with the seed value {seed}")
     return to_dataframe(batches)
-
-
-def export(depts_json, rooms_json, output_path, seed):
-    batches = generate(depts_json, rooms_json, seed)
-    batches.to_csv(output_path, index=False)
-    print(f"Saved {output_path}")
