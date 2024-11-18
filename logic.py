@@ -210,9 +210,6 @@ def distribute(batches, rooms, classtype, iteration=1):
                 days.remove(batch.offday)
                 no_of_days -= 1
 
-            if batch.dept == "English" and batch.sem == 2 and batch.prgm == "U.G." and iteration == MIN_CLASSES:
-                pass
-
             while batch.rem_classes(classtype, is_practical=True) > 0 and len(days) > 0:
                 if batch.rem_classes(classtype) < MIN_CLASSES and iteration != 1:
                     days = sorted(days, key=(lambda x: sum([slot.classtype == ClassType.NA for slot in batch.grid[x]])))
@@ -244,9 +241,6 @@ def distribute(batches, rooms, classtype, iteration=1):
             if batch.offday != None:
                 days.remove(batch.offday)
                 no_of_days -= 1
-
-            if batch.dept == "English" and batch.sem == 2 and batch.prgm == "U.G." and iteration == MIN_CLASSES:
-                pass
 
             while batch.rem_classes(classtype) > 0 and len(days) > 0:
                 if batch.rem_classes(classtype) < MIN_CLASSES and iteration != 1:
@@ -526,7 +520,8 @@ def generate(depts_json, rooms_json, seed, iteration=1000):
             break
         except:
             print("error: failed to generate!")
-            seed += (i * i + i) >> 1
+            j = i + 1
+            seed += (j * j + j) >> 1
 
     # if it fails to generate the routine even after {iteration} no of iterations, it will throw an exception
     if batches == None:
